@@ -6,7 +6,7 @@ export default class CardStack extends Component {
         super(props);
         this.state = {
             hoveredIndex: null,
-            cards: ['/1.png', '/2.png', '/3.png'],
+            cards: ['/portfolio/1.png', '/portfolio/2.png', '/portfolio/3.png'],
         };
     }
 

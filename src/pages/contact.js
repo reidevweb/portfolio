@@ -64,7 +64,7 @@ export default function Contact() {
           </div>
           
           <div className="contact-image">
-            <img src="/bg.png" alt="Person with laptop" />
+            <img src="/portfolio/bg.png" alt="Person with laptop" />
           </div>
         </div>
 

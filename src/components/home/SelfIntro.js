@@ -50,7 +50,7 @@ export default function SelfIntro() {
                     
                       <div className="self-card text-center border-0 mb-4">
                         <div className="card-cup">
-                          <img id="self-img" src="/Self.png" alt="Logo" />
+                          <img id="self-img" src="/portfolio/Self.png" alt="Logo" />
                         </div>
       
                         <div className="card-body proavatar">

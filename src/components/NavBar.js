@@ -6,7 +6,7 @@ export default function NavBar ({pages}) {
     return (
         <div className="nav-bar">
             <div className="logo">
-                <img id="logo-img" src="/logo.png" alt="Logo"/>
+                <img id="logo-img" src="/portfolio/logo.png" alt="Logo"/>
             </div>
             
             <div className="page-links">

@@ -13,7 +13,7 @@ export default function About() {
                 <div className="about-container">
                     <div id="about" className="box-container">
                         <div className="box">
-                            <img src="/Self.png" alt="Cat Care"/>
+                            <img src="/portfolio/Self.png" alt="Cat Care"/>
                             <div className="info">
                                 <h1>Reina Mariane</h1>
                                 <p>
