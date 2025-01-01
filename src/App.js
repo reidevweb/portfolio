@@ -19,7 +19,7 @@ function App() {
   
   return (
   <div className="app">
-    <Router>
+    <Router basename="/portfolio">
       <NavBar pages={pages}/>
     
         <Routes>
