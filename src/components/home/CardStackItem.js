@@ -31,7 +31,7 @@ export default function CardStackItem({ index, middleIndex, hoveredIndex, conten
             }}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}>
-            <img src={content} className="img-fluid" alt={content} />
+            <img src={content} alt={content} />
         </div>
     );
 }

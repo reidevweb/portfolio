@@ -42,6 +42,15 @@ h2::after {
   margin: auto;
 }
 
+h3 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  text-align: start;
+}
+
 /* TOP NAV BAR */
 
 #logo-img {
@@ -69,21 +78,68 @@ h2::after {
   border-radius: 48px;
   transition: all 0.3s ease, padding 0.3s ease; 
   font-weight: 600;
+  position: relative;
 }
 
 .nav-page-active {
   background: #e8ca75;
-  
 }
 
-.nav-page:hover:not(.nav-page-active) {
-  color: #e8ca75;
+.nav-page:not(.nav-page-active):hover p {
+  color: #79293c; 
+}
+
+.nav-page:hover {
+  cursor: pointer;
+}
+
+.nav-page:hover .dropdown-menu {
+  display: block; 
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none; 
+  border-radius: 0 0 16px 16px;
+  z-index: 10; 
+  width: 100%;
+  border: none;
+}
+
+.dropdown-menu li {
+  padding: 16px 20px;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover a {
+  color: #79293c;
+}
+
+.dropdown-menu li:last-child:hover{
+  border-radius: 0 0 16px 16px; 
+}
+
+.dropdown-icon {
+  font-size: 12px; 
+  padding-left: 12px;
 }
 
 .page-links p {
   padding-bottom: 0;
   margin: 0;
 }
+
 @media (max-width: 1160px) {
   .logo {
     display: flex;
@@ -169,26 +225,25 @@ h2::after {
 .arrow {
   position: absolute;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
   border: none;
-  color: white;
+  color: #1d1d1d;
   padding: 10px;
-  font-size: 24px;
+  font-size: 48px;
   cursor: pointer;
   z-index: 1;
   display: none;
 }
 
 .left-arrow {
-  left: 0;
+  left: 72px;
 }
 
 .right-arrow {
-  right: 0;
+  right: 72px;
 }
 
 .arrow:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  color: #e8ca75;
 }
 
 
@@ -201,6 +256,12 @@ h2::after {
   transition: 0.4s ease-out;
   position: relative;
   left: 0px;
+}
+
+.card img {
+  box-shadow: 1rem 1rem 2rem #181818; 
+  background-color:#181818;     
+  border-radius: 56px;
 }
 
 .left-slanted {
@@ -336,11 +397,11 @@ h2::after {
 
 /* SELF-CARD */
 #self-intro {
-  padding: 24px 36px 0 36px;
+  margin: 120px 36px 0 36px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  /* background: linear-gradient(135deg, rgba(232, 202, 117, 0.8), rgba(121, 41, 60, 0.8)); */
 }
 
 @media (max-width: 1400px) {
@@ -372,6 +433,8 @@ h2::after {
 
 .card-body {
   padding: 2.5rem 2rem 2rem 2rem;
+  background: #eeeeee;
+  border-radius: 0 0 0.8rem 0.8rem ;
 }
 
 .card-cup {
@@ -670,7 +733,7 @@ h2::after {
   background-color: #1d1d1d;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 12px;
   cursor: pointer;
   font-weight: bolder;
   transition: all 0.3s ease,
@@ -688,8 +751,8 @@ h2::after {
 }
 
 .contact-form button:hover, .intro-btn:hover {
-  color: black;
-  background-color: #e8ca75;
+  color: white;
+  background-color: #79293c;
 }
 
 .contact-image {
@@ -767,11 +830,6 @@ h1 {
   border-radius: 2.5rem;    
 }
 
-
-.intro-btn:hover {
-  background-color: #e8ca75;
-}
-
 .social-media-icons {
   display: flex;
   justify-content: center;
@@ -793,7 +851,8 @@ h1 {
 }
 
 .social-media-icons a:hover {
-  background-color: #e8ca75; 
+  background-color: #79293c; 
+  color: white;
 }
 
 #home-proj {
@@ -825,6 +884,10 @@ h1 {
     padding-top: 24px;
   }
 
+  #cards-banner-container {
+    background-color: transparent;
+  }
+
   #cards-banner .card:not(.front) {
     display: none;
   }
@@ -845,6 +908,11 @@ h1 {
   .arrow {
     display: block;
   }
+  
+  .card img {
+    box-shadow: 1rem 1rem 2rem #929292; 
+    background-color:#929292;    
+  }
 }
 
 .hovered-card {
@@ -854,6 +922,50 @@ h1 {
 
 .unhovered-card {
   transform: translateY(18%);
+}
+
+#home-featured  {
+  margin: 160px 80px;
+}
+
+#featured-list  {
+  margin: 100px 80px;
+}
+
+#feature-img {
+  box-shadow: 1rem 1rem 2rem #929292; 
+  border-radius: 18px;
+  width: 60%;
+}
+
+.featured-btn {
+  color: #1d1d1d;
+  border: 2px solid #1d1d1d;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: all 0.3s ease,
+}
+
+.featured-btn:hover {
+  color: white;
+  background-color: #1d1d1d;
+}
+
+.featured-header {
+  color: #b49055; 
+  font-weight: bolder; 
+  font-size: 32px;
+  margin: 0;
+}
+
+.feature-utils {
+  width: 48px;
+  height: 48px;
+}
+
+.feature-title {
+  font-size: 3rem;
+  font-weight: bolder; 
 }
 
 .overlay {
@@ -876,3 +988,19 @@ h1 {
   font-weight: 600;
 }
 
+/* Add these styles to your CSS */
+.portfolio-item img {
+  opacity: 0;
+  transform: scale(0.9); /* Initial smaller size */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth fade-in and scale transition */
+}
+
+.portfolio-item img.visible {
+  opacity: 1;
+  transform: scale(1); /* Final normal size */
+}
+
+
+.hidden {
+  display: none;
+}

@@ -8,97 +8,97 @@ export default function Projects() {
     {
       id: 1,
       title: 'Harvesteer',
-      imgSrc: 'portfolio/a.png',
+      imgSrc: 'a.png',
       category: 'Mobile App',
     },
     {
       id: 2,
       title: 'E-Book',
-      imgSrc: 'portfolio/b.png',
+      imgSrc: 'b.png',
       category: 'Mobile App',
     },
     {
       id: 3,
       title: 'E-Book',
-      imgSrc: 'portfolio/c.png',
+      imgSrc: 'c.png',
       category: 'Mobile App',
     },
     {
       id: 4,
       title: 'Our Home',
-      imgSrc: 'portfolio/d.png',
+      imgSrc: 'd.png',
       category: 'Mobile App',
     },
     {
       id: 5,
       title: 'Our Home',
-      imgSrc: 'portfolio/e.png',
+      imgSrc: 'e.png',
       category: 'Website',
     },
     {
       id: 6,
       title: 'Our Home',
-      imgSrc: 'portfolio/f.png',
+      imgSrc: 'f.png',
       category: 'Website',
     },
     {
       id: 7,
       title: 'The Cerve',
-      imgSrc: 'portfolio/g.png',
+      imgSrc: 'g.png',
       category: 'Mobile App',
     },
     {
       id: 8,
       title: 'The Cerve',
-      imgSrc: 'portfolio/h.png',
+      imgSrc: 'h.png',
       category: 'Mobile App',
     },
     {
       id: 9,
       title: 'The Cerve',
-      imgSrc: 'portfolio/i.png',
+      imgSrc: 'i.png',
       category: 'Mobile App',
     },
     {
       id: 10,
       title: 'The Cerve',
-      imgSrc: 'portfolio/j.png',
+      imgSrc: 'j.png',
       category: 'Mobile App',
     },
     {
       id: 11,
       title: 'The Cerve',
-      imgSrc: 'portfolio/k.png',
+      imgSrc: 'k.png',
       category: 'Website',
     },
     {
       id: 12,
       title: 'The Cerve',
-      imgSrc: 'portfolio/l.png',
+      imgSrc: 'l.png',
       category: 'Website',
     },
     {
       id: 13,
       title: 'The Cerve',
-      imgSrc: 'portfolio/m.png',
+      imgSrc: 'm.png',
       category: 'Website',
     },
     {
       id: 14,
       title: 'The Cerve',
-      imgSrc: 'portfolio/n.png',
+      imgSrc: 'n.png',
       category: 'Website',
     },
     {
       id: 15,
       title: "Phefayer's",
-      imgSrc: 'portfolio/p.png',
+      imgSrc: 'p.png',
       category: 'Website',
     },
     {
       id: 16,
       title: "Phefayer's",
-      imgSrc: 'portfolio/q.png',
+      imgSrc: 'q.png',
       category: 'Website',
     },
   ];
@@ -106,7 +106,7 @@ export default function Projects() {
   return (
     <>
       <main>
-        <h2>Projects</h2>
+        <h2>Gallery</h2>
         <Gallery 
           id="Projects" 
           items={portfolioItems}
