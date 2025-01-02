@@ -43,7 +43,7 @@ h2::after {
 }
 
 h3 {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -856,7 +856,7 @@ h1 {
 }
 
 #home-proj {
-  padding: 80px 0 100px 0;
+  padding: 40px 0 100px 0;
 }
 
 #home-proj h1 {
@@ -964,7 +964,7 @@ h1 {
 }
 
 .feature-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: bolder; 
 }
 
@@ -988,19 +988,36 @@ h1 {
   font-weight: 600;
 }
 
-/* Add these styles to your CSS */
 .portfolio-item img {
   opacity: 0;
-  transform: scale(0.9); /* Initial smaller size */
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth fade-in and scale transition */
+  transform: scale(0.9); 
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
 }
 
 .portfolio-item img.visible {
   opacity: 1;
-  transform: scale(1); /* Final normal size */
+  transform: scale(1); 
 }
 
 
 .hidden {
   display: none;
+}
+
+.skill-box {
+  background-color: #f8f9fa; 
+  border: 1px solid #ddd; 
+  border-radius: 1rem; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+}
+
+.skill-box {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333; 
 }

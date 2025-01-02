@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import CardStack from '../components/home/CardStack';
 import SelfIntro from '../components/home/SelfIntro';
 import FeaturedItem from '../components/projects/FeaturedItem';
+import Services from '../components/home/Services';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -15,8 +16,9 @@ export default function Home() {
               backgroundRepeat: 'no-repeat',
             }}>
                 <SelfIntro />
-                <FeaturedItem />
+                <Services />
                 <CardStack />
+                <FeaturedItem />
             </main>
             
             <Footer/>
