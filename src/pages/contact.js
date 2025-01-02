@@ -1,33 +1,22 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import Footer from '../components/Footer';
-import { type } from '@testing-library/user-event/dist/type';
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
+  const [state, handleSubmit] = useForm("xbllpllo");
+  const [alertShown, setAlertShown] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Your message has been sent. Thank you!');
-  };
+  useEffect(() => {
+    if (state.succeeded && !alertShown) {
+      alert('Your message has been sent. Thank you!');
+      setAlertShown(true);
+    }
+  }, [state.succeeded, alertShown]); 
 
   return (
     <>
       <main>
-      <h2>Contact</h2>
+        <h2>Contact</h2>
         <div className="contact-container">
           <div className="contact-form">
             <h1>Let's talk!</h1>
@@ -37,29 +26,29 @@ export default function Contact() {
             </p>
             <form onSubmit={handleSubmit}>
               <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-              <input
                 type="email"
                 name="email"
                 placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
                 required
+              />
+              <ValidationError 
+                prefix="Email" 
+                field="email"
+                errors={state.errors}
               />
               <textarea
+                id="message"
                 name="message"
                 placeholder="Message"
-                value={formData.message}
-                onChange={handleChange}
                 required
               />
-              <button type="submit">Send Message</button>
+              <ValidationError 
+                field="message"
+                errors={state.errors}
+              />
+              <button type="submit" disabled={state.submitting}>
+                Submit
+              </button>
             </form>
           </div>
           
@@ -67,12 +56,9 @@ export default function Contact() {
             <img src="/portfolio/bg.png" alt="Person with laptop" />
           </div>
         </div>
-
       </main>
       
-      <Footer/>
+      <Footer />
     </>
-    
-    
   );
 }
