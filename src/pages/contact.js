@@ -17,7 +17,7 @@ export default function Contact() {
     <>
       <main>
         <h2>Contact</h2>
-        <div className="contact-container mt-5">
+        <div className="contact-container">
           <div className="contact-form">
             <h1>Let's talk!</h1>
             <p>

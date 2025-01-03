@@ -347,11 +347,20 @@ footer #logo-img {
   border: 1px solid black;
 }
 
+@media (max-width: 768px) {
+  .portfolio .portfolio-filters li {
+    margin: 5px;
+    width: 60%;
+  }
+}
 
 @media (max-width: 575px) {
   .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 5px;
+    font-size: 18px;
+  }
+  
+  .portfolio .portfolio-filters {
+    padding: 0 0 48px 0;
   }
 }
 
@@ -784,7 +793,7 @@ footer #logo-img {
   }
   
   .contact-image {
-    margin-top: -160px; 
+    margin-top: -120px; 
   }
   
   .contact-image img {
@@ -972,7 +981,7 @@ h1 {
   
   #featured-list #feature-img{
     margin-top: 36px;
-    width: 90%;
+    width: 100%;
   }
 }
 
