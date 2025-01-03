@@ -16,7 +16,7 @@ function App() {
     Projects: ['Gallery', 'Featured'],
     About: [],
     Contact: []
-};
+  };
   
   return (
   <div className="app">

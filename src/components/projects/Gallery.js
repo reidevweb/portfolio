@@ -63,6 +63,7 @@ export default function Gallery({ id, items }) {
                                 key={`gallery-${id}${index}`}
                                 id={id} 
                                 imgSrc={item.imgSrc}
+                                type={item.type}
                                 title={item.title}
                                 description={item.description}
                                 category={`filter-${item.category.toLowerCase().replace(/\s+/g, '')}`}

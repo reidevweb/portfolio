@@ -10,6 +10,8 @@ export default function Projects() {
       title: 'Harvesteer',
       imgSrc: 'a.png',
       category: 'Mobile App',
+      type: 'Agriculture App',
+      description: 'A machine learning-based'
     },
     {
       id: 2,

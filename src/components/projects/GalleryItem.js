@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import GLightbox from 'glightbox';
 import 'glightbox/dist/css/glightbox.css';
 
-const GalleryItem = ({ id, imgSrc, title, description, category, isLightbox = false }) => {
+const GalleryItem = ({ id, imgSrc, type, title, description, category, isLightbox = false }) => {
   const [isVisible, setIsVisible] = useState(false);
   const imgRef = useRef(null);
   const lightboxRef = useRef(null);
@@ -11,7 +11,7 @@ const GalleryItem = ({ id, imgSrc, title, description, category, isLightbox = fa
 
   const className = isLightbox ? 'glightbox' : '';
   const imgUrl = isLightbox ? `/portfolio/${imgSrc}` : '';
-  const lightboxUrl = isLightbox ? `/portfolio/${imgSrc}` : '';
+  const lightboxUrl = isLightbox ? `/${imgSrc}` : '';
 
   useEffect(() => {
     if (isLightbox && lightboxInstance.current === null) {
@@ -44,7 +44,7 @@ const GalleryItem = ({ id, imgSrc, title, description, category, isLightbox = fa
   }, []);
 
   return (
-    <div key={`img-${id}`} className={`col-lg-4 col-md-6 portfolio-item isotope-item ${category}`}>
+    <div key={`img-${id}`} className={`gallery-item col-lg-4 col-md-6 portfolio-item isotope-item ${category}`}>
       <Link 
         to={lightboxUrl} 
         data-gallery="portfolio-gallery-app" 
@@ -55,11 +55,14 @@ const GalleryItem = ({ id, imgSrc, title, description, category, isLightbox = fa
         <img 
           ref={imgRef}
           src={imgUrl} 
-          className={`img-fluid ${isVisible ? 'visible' : ''}`} 
+          className={`img-fluid gallery-img ${isVisible ? 'visible' : ''}`} 
           alt={title}
           loading="lazy"
         />
-        Description
+        <div className="gallery-info">
+        <p id="gallery-title" className="m-0">{title}</p>   
+          <div id="gallery-type" className="m-0">{type}</div>
+        </div>
       </Link>
     </div>
   );

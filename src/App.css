@@ -338,61 +338,31 @@ h3 {
   }
 }
 
-.portfolio .portfolio-content {
-  background-color: var(--surface-color);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  height: 100%;
-  overflow: hidden;
+.gallery-img {
+  border-radius: 20px 20px 0 0  !important;
 }
 
-.portfolio .portfolio-content img {
-  transition: 0.3s;
-  position: relative;
-  z-index: 1;
+.gallery-info {
+  padding: 16px;
+  display: flex; 
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+  align-items: flex-start;
 }
 
-.portfolio-info {
-  padding: 24px;
-  position: absolute;
-  top: 0;
+#gallery-title {
+  font-size: 1.5rem; 
 }
 
-.portfolio .portfolio-content .portfolio-info {
-  background-color: var(--background-color);
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  padding: 25px 20px;
-  position: relative;
-  z-index: 2;
-}
-
-.portfolio .portfolio-content .portfolio-info h4 {
-  font-size: 18px;
-  font-weight: 600;
-  padding-right: 50px;
-}
-
-.portfolio .portfolio-content .portfolio-info h4 a {
-  color: var(--heading-color);
-  transition: 0.3s;
-}
-
-.portfolio .portfolio-content .portfolio-info h4 a:hover {
-  color: var(--accent-color);
-}
-
-.portfolio .portfolio-content .portfolio-info p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-size: 14px;
-  margin-bottom: 0;
-  padding-right: 50px;
-}
-
-.portfolio .portfolio-content:hover img {
-  transform: scale(1.1);
+#gallery-type {
+  background-color: rgb(236, 236, 236);
+  border-radius: 8px;
+  padding: 4px 16px;
 }
 
 .img-fluid, .rounded {
-  border-radius: 20px !important;
+  border-radius: 20px;
 }
 
 /* SELF-CARD */
@@ -968,6 +938,10 @@ h1 {
   font-weight: bolder; 
 }
 
+.feature-desc {
+  font-size: 1.25rem;
+}
+
 .overlay {
   position: absolute;
   bottom: 0;
@@ -1007,7 +981,7 @@ h1 {
 .skill-box {
   background-color: #f8f9fa; 
   border: 1px solid #ddd; 
-  border-radius: 1rem; 
+  border-radius: 18px !important; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1021,3 +995,9 @@ h1 {
   font-weight: 500;
   color: #333; 
 }
+
+.skill-bullet {
+  border-radius: 100%;
+  width: 8px; height: 8px;
+}
+
