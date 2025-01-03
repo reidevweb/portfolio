@@ -25,7 +25,7 @@ export default function Services() {
       <div className="container py-5">
         <div className="row g-4">
           {skills.map((skill, index) => (
-            <div key={index} className="col-md-3 col-sm-6">
+            <div key={index} className="col-xl-3 col-sm-6">
               <div className="skill-box d-flex justify-content-center align-items-center text-center p-4 rounded">
                 <div key={index} className="skill-bullet" style={{ backgroundColor: colors[index] }}>
                 </div>

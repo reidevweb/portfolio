@@ -38,7 +38,7 @@ export default class CardStack extends Component {
                     <div id="cards-banner-container">
                         <div id="cards-banner" className="cards-container mt-5">
                             <button className="arrow left-arrow" onClick={() => this.handleArrowClick()}>
-                                &#9664;
+                                <i className="fas fa-angle-left prev"></i>
                             </button>
             
                             <div className='stack-cards'>
@@ -64,7 +64,7 @@ export default class CardStack extends Component {
                             </div>
             
                             <button className="arrow right-arrow" onClick={() => this.handleArrowClick()}>
-                                &#9654;
+                                <i className="fas fa-angle-right"></i>
                             </button>
                         </div>
                     </div>
