@@ -14,7 +14,8 @@ export default function Featured() {
     {
       id: 1,
       title: "Harvesteer",
-      imgSrc: "web-feature.png",
+      count: 6,
+      imgSrc: "featured/web-feature.png",
       category: ["Mobile App"],
       utils: ["flutter.png", "django.png"],
       description: "A machine learning-based",
@@ -22,8 +23,9 @@ export default function Featured() {
     },
     {
       id: 2,
-      title: "Collegian",
-      imgSrc: "web-feature.png",
+      title: "The Cerve",
+      count: 8,
+      imgSrc: "featured/web-feature.png",
       category: ["Mobile App"],
       utils: ["flutter.png", "django.png"],
       description: "A machine learning-based",
@@ -76,6 +78,7 @@ export default function Featured() {
                     imgSrc={item.imgSrc}
                     category={item.category}
                     title={item.title}
+                    count={item.count}
                     description={item.description}
                     utils={item.utils}
                     inProjects={inProjects}
@@ -115,6 +118,7 @@ export default function Featured() {
                 imgSrc={item.imgSrc}
                 category={item.category}
                 title={item.title}
+                count={item.count}
                 description={item.description}
                 utils={item.utils}
                 inProjects={inProjects}

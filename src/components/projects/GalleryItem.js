@@ -10,8 +10,8 @@ const GalleryItem = ({ id, imgSrc, type, title, description, category, isLightbo
   const lightboxInstance = useRef(null);  // Use ref to store lightbox instance
 
   const className = isLightbox ? 'glightbox' : '';
-  const imgUrl = isLightbox ? `/portfolio/${imgSrc}` : '';
-  const lightboxUrl = isLightbox ? `/${imgSrc}` : '';
+  const imgUrl = isLightbox ? `/portfolio/gallery/${imgSrc}` : '';
+  const lightboxUrl = isLightbox ? `/gallery/${imgSrc}` : '';
 
   useEffect(() => {
     if (isLightbox && lightboxInstance.current === null) {

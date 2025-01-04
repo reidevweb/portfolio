@@ -16,7 +16,7 @@ export default function Contact() {
   return (
     <>
       <main>
-        <h2>Contact</h2>
+        <h2 id="contact-header">Contact</h2>
         <div className="contact-container">
           <div className="contact-form">
             <h1>Let's talk!</h1>
