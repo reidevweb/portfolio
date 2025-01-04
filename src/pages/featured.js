@@ -14,23 +14,34 @@ export default function Featured() {
     {
       id: 1,
       title: "Harvesteer",
-      count: 6,
-      imgSrc: "featured/web-feature.png",
+      count: 7,
+      imgSrc: "featured/harvesteer.png",
       category: ["Mobile App"],
       utils: ["flutter.png", "django.png", "firebase.png", "postgresql.png", "redis.png"],
-      description: "A machine learning-based",
+      description: "A machine learning-based crop management app designed to address the problems encountered by an accredited organic practitioner whose research focuses on organic fertilizer production and its utilization in agriculture. The system helps evaluate their operations with features such as expense and sales tracking, task management, timely harvest guidance through predictions, and report generation for smarter crop planning. It addresses identified user pain points by promoting optimized resource and labor use as well as strategic market planning through data visualizations and push notifications.",
+      color: 'rgb(192, 192, 192)',
+    },
+    
+    {
+      id: 2,
+      title: "Kule",
+      count: 5,
+      imgSrc: "featured/kule.png",
+      category: ["Mobile App"],
+      utils: ["flutter.png", "firebase.png"],
+      description: "A content production and tracking system designed to address challenges from disorganized information flow, including announcements, important events, target deliverables, and various paperwork such as meeting minutes, articles, and multimedia materials, across multiple tools like shared documents and text messages. The system streamlines the organization's processes by automating information forwarding based on a defined hierarchical structure, batch scanning QR codes for efficient attendance tracking, and offering easier and centralized access to all publication data.",
       color: 'rgb(192, 192, 192)',
     },
     {
-      id: 2,
+      id: 3,
       title: "CodeHub",
       count: 3,
-      imgSrc: "featured/web-feature.png",
+      imgSrc: "featured/codehub.png",
       category: ["Mobile App"],
       utils: ["react.png", "tailwind.png", "nestJS.png"],
-      description: "A machine learning-based",
+      description: "A code documentation and learning platform designed to serve as a central library for reusable components, providing faster and centralized access to commonly used functions, modules, and libraries from different frameworks and tools for software development.",
       color: 'rgb(192, 192, 192)',
-    }
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0); // state to track the active slide
@@ -110,7 +121,7 @@ export default function Featured() {
       ) : (
         <>
           <main>
-            <h2>Recent Projects</h2>
+            <h2>Featured Projects</h2>
             {featuredItems.map((item, index) => (
               <FeaturedItem
                 key={`feature-${item.id}${index}`}

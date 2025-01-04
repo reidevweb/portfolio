@@ -278,7 +278,7 @@ footer #logo-img {
 .card img {
   box-shadow: 1rem 1rem 2rem #181818; 
   background-color:#181818;     
-  border-radius: 56px;
+  border-radius: 48px;
 }
 
 .left-slanted {
@@ -974,7 +974,7 @@ h1 {
 }
 
 #featured-list  {
-  margin: 100px 80px;
+  margin: 40px 40px 100px;
 }
 
 @media (max-width: 990px) {

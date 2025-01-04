@@ -9,11 +9,16 @@ const FeaturedSlider = ({ title, count }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   
-  if (count % (isSmallScreen ? 2 : 3) !== 0) {
-    images.push({
-      src: `/portfolio/gallery/blank.png`,
-    });
-  }
+    const groupSize = isSmallScreen ? 2 : 3;
+    const remainder = count % groupSize;
+    const blanksNeeded = remainder === 0 ? 0 : groupSize - remainder;
+    
+    for (let i = 0; i < blanksNeeded; i++) {
+      images.push({
+        src: `/portfolio/gallery/blank.png`,
+        alt: 'Blank image',
+      });
+    }
 
   useEffect(() => {
     const handleResize = () => {

@@ -23,7 +23,7 @@ function generatePortfolioItems(itemDefinitions) {
 }
 
 const itemDefinitions = [
-  { name: 'Harvesteer', count: 7, category: 'Mobile App', type: 'Agriculture App', description: 'A machine learning-based'},
+  { name: 'Harvesteer', count: 7, category: 'Mobile App'},
   { name: 'Kule', count: 5, category: 'Mobile App' },
   { name: 'The Cerve', count: 8, category: 'Web Development' },
   { name: 'Lavenry', count: 2, category: 'Mobile App' },
