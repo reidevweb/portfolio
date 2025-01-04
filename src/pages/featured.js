@@ -17,17 +17,17 @@ export default function Featured() {
       count: 6,
       imgSrc: "featured/web-feature.png",
       category: ["Mobile App"],
-      utils: ["flutter.png", "django.png"],
+      utils: ["flutter.png", "django.png", "firebase.png", "postgresql.png", "redis.png"],
       description: "A machine learning-based",
       color: 'rgb(192, 192, 192)',
     },
     {
       id: 2,
-      title: "The Cerve",
-      count: 8,
+      title: "CodeHub",
+      count: 3,
       imgSrc: "featured/web-feature.png",
       category: ["Mobile App"],
-      utils: ["flutter.png", "django.png"],
+      utils: ["react.png", "tailwind.png", "nestJS.png"],
       description: "A machine learning-based",
       color: 'rgb(192, 192, 192)',
     }
@@ -110,7 +110,7 @@ export default function Featured() {
       ) : (
         <>
           <main>
-            <h2>Featured Projects</h2>
+            <h2>Recent Projects</h2>
             {featuredItems.map((item, index) => (
               <FeaturedItem
                 key={`feature-${item.id}${index}`}

@@ -968,6 +968,11 @@ h1 {
   }
 }
 
+#home-featured .right-container {  
+  display: flex;
+  justify-content: center;
+}
+
 #featured-list  {
   margin: 100px 80px;
 }
