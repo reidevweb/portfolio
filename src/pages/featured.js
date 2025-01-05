@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 import Footer from "../components/Footer";
 import FeaturedItem from "../components/projects/FeaturedItem";
@@ -122,7 +122,13 @@ export default function Featured() {
         <>
           <main>
             <h2>Featured Projects</h2>
-            <div className="mb-5"></div>
+            <div id="goToGalleryBtn" className="d-flex justify-content-end mr-5">
+              <Link to="/projects/gallery">
+                <button className="outline-btn intro-btn">
+                  View Gallery
+                </button>
+              </Link>
+            </div>
             <div className="mb-5"></div>
             {featuredItems.map((item, index) => (
               <FeaturedItem

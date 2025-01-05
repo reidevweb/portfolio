@@ -18,7 +18,30 @@ export default function Home() {
                 <SelfIntro />
                 <Services />
                 <CardStack />
-                <Featured />
+                {/* <Featured /> */}
+                <section
+                  id="home-contact-section"
+                  className="d-flex justify-content-center align-items-center mt-5" 
+                  style={{ height: '100vh',
+                    backgroundImage: 'url("/portfolio/bg-contact.png")',
+                    backgroundSize: 'cover', 
+                    backgroundRepeat: 'no-repeat', }}
+                >
+                  <div className="container">
+                    <div className="row justify-content-center mb-5 pb-3">
+                      <div className="heading-section text-center ftco-animate">
+                        <span className="subheading">Get in Touch</span>
+                        <h2 className="mb-4">Let’s talk about your next project.</h2>
+                        <p>I’m here to help bring your ideas to life, whether you’re starting a new project, refining an existing one, or overcoming a unique challenge. Let’s work together to create meaningful solutions.</p>
+                      </div>
+                    </div>
+                    <div className="d-flex justify-content-center">
+                      <Link to="/contact">
+                        <button className="outline-btn intro-btn">Get Started</button>
+                      </Link>
+                    </div>
+                  </div>
+                </section>
             </main>
             
             <Footer/>

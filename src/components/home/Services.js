@@ -16,8 +16,8 @@ export default function Services() {
   ];
   
   return (
-    <div className="services m-5">
-      <h1 className="d-flex justify-content-center align-items-center display-3">What I do</h1>
+    <div className="services">
+      <h1 className="d-flex justify-content-center align-items-center display-3 mt-3">What I do</h1>
       <div className="text-center">
         <div className="fs-3 fw-light text-muted">Passion and curiosity drives me to strive</div>
       </div>

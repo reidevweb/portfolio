@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function CardStackItem({ index, middleIndex, hoveredIndex, content, onMouseEnter, onMouseLeave, hoverClass}) {
+export default function CardStackItem({ index, middleIndex, hoveredIndex, content, title, onMouseEnter, onMouseLeave, hoverClass}) {
     let classCard = '';
     let cardTransform = '';
     
@@ -31,7 +31,21 @@ export default function CardStackItem({ index, middleIndex, hoveredIndex, conten
             }}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}>
+            {index === middleIndex 
+                && 
+                <div className="tooltip-container d-flex justify-content-center" style={{ position: 'relative' }}>
+                    <span className="mobile-tooltip up">{title}</span>
+                </div>
+            }
             <img src={content} alt={content} />
+            {index !== middleIndex 
+                &&
+                <div className={`tooltip-container  d-flex ${index === 2 ? 'justify-content-end' : 'justify-content-start'}`} style={{ position: 'relative' }}>
+                    <span className={`mobile-tooltip down ${index === 0 ? 'left' : 'right'}`}>
+                        {title}
+                    </span>
+                </div>
+            }
         </div>
     );
 }

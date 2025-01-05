@@ -7,6 +7,7 @@ export default class CardStack extends Component {
         this.state = {
             hoveredIndex: null,
             cards: ['/portfolio/home/1.png', '/portfolio/home/2.png', '/portfolio/home/3.png'],
+            titles: ['The Cerve', 'Harvesteer', 'Kule']
         };
     }
 
@@ -23,6 +24,12 @@ export default class CardStack extends Component {
         const lastCard = cards.pop();
         cards.unshift(lastCard);
         this.setState({ cards });
+        
+        const titles = [...this.state.titles];
+        const lastTitle = titles.pop();
+        titles.unshift(lastTitle);
+        this.setState({ titles });
+        console.log(cards);
     }
     
 
@@ -36,7 +43,7 @@ export default class CardStack extends Component {
                 
                 <div id="home-proj" >
                     <div id="cards-banner-container">
-                        <div id="cards-banner" className="cards-container mt-5">
+                        <div id="cards-banner" className="cards-container">
                             <button className="arrow left-arrow" onClick={() => this.handleArrowClick()}>
                                 <i className="fas fa-angle-left prev"></i>
                             </button>
@@ -50,7 +57,8 @@ export default class CardStack extends Component {
                                             middleIndex={middleIndex}
                                             hoveredIndex={this.state.hoveredIndex} 
                                             
-                                            content={item}
+                                            content={this.state.cards[index]}
+                                            title={this.state.titles[index]}
                                             
                                             onMouseEnter={() => this.handleMouseEnter(index)} 
                                             onMouseLeave={this.handleMouseLeave} 

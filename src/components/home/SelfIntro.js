@@ -31,7 +31,7 @@ export default function SelfIntro() {
         <div className="row d-flex justify-content-center  gx-5 align-items-center w-100">
           <div className="col-xxl-5 text-center">
             <div className="fs-3 fw-light text-muted">I can help your business to</div>
-            <h1 className="display-3 fw-bolder mb-5">Create Solutions. Drive Growth</h1>
+            <h1 className="display-3 fw-bolder mb-5">Create Solutions and Drive Growth.</h1>
             <Link to="/contact">
               <button className="outline-btn intro-btn">
                 Get Started

@@ -168,6 +168,11 @@ footer #logo-img {
     text-align: left; 
   }
 }
+
+.services {
+  margin-top: 120px;
+}
+
 @media (max-width: 768px) {
   .logo {
     display: flex;
@@ -633,7 +638,6 @@ footer #logo-img {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  margin-top: 80px;
   background-color: #c8bfb4;
   font-size: 14px;
   text-align: center;
@@ -871,12 +875,16 @@ h1 {
 }
 
 #home-proj {
-  padding: 40px 0 100px 0;
+  padding: 40px 0 0 0;
 }
 
 #home-proj h1 {
   margin-top: -48px; 
   padding: 0 36px 36px 36px;
+}
+
+#mobile-preview {
+  margin-top: 180px;
 }
 
 #cards-banner-container {
@@ -1366,4 +1374,50 @@ h1 {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
+}
+
+.mobile-tooltip {
+  position: absolute;
+  background-color: #333; 
+  color: #fff; 
+  padding: 0.5rem 1rem; 
+  border-radius: 4px; 
+  font-size: 1rem; 
+  white-space: nowrap; 
+  z-index: 99;
+  transform: translateY(-150%); 
+}
+
+.mobile-tooltip.right {
+  transform: translate(-200%, 50%); 
+}
+
+.mobile-tooltip.left {
+  transform: translate(100%, 50%); 
+}
+
+.mobile-tooltip.down::before {
+  content: '';
+  position: absolute;
+  top: -25px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  border-width: 15px; 
+  border-style: solid;
+  border-color: transparent transparent #333 transparent; 
+}
+
+.mobile-tooltip.up::after {
+  content: '';
+  position: absolute;
+  bottom: -25px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  border-width: 15px; 
+  border-style: solid;
+  border-color: #333 transparent transparent transparent; 
+}
+
+#home-contact-section {
+  margin-top: 100px;
 }
