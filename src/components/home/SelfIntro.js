@@ -30,7 +30,7 @@ export default function SelfIntro() {
       <div id="self-intro" className="py-5 d-flex justify-content-center align-items-center">
         <div className="row d-flex justify-content-center  gx-5 align-items-center w-100">
           <div className="col-xxl-5 text-center">
-            <div className="fs-3 fw-light text-muted">I can help your business to</div>
+            <div className="fs-3 fw-light text-muted subtitle">I can help your business to</div>
             <h1 className="display-3 fw-bolder mb-5">Create Solutions and Drive Growth.</h1>
             <Link to="/contact">
               <button className="outline-btn intro-btn">

@@ -14,7 +14,8 @@ export default function Featured() {
     {
       id: 1,
       title: "Harvesteer",
-      count: 7,
+      count: 6,
+      count_v2: 1,
       imgSrc: "featured/harvesteer.png",
       category: ["Mobile App"],
       utils: ["flutter.png", "django.png", "firebase.png", "postgresql.png", "redis.png"],
@@ -138,6 +139,7 @@ export default function Featured() {
                 category={item.category}
                 title={item.title}
                 count={item.count}
+                count_v2={item.count_v2}
                 description={item.description}
                 utils={item.utils}
                 inProjects={inProjects}

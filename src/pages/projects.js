@@ -23,7 +23,8 @@ function generatePortfolioItems(itemDefinitions) {
 }
 
 const itemDefinitions = [
-  { name: 'Harvesteer', count: 7, category: 'Mobile App'},
+  { name: 'Harvesteer', count: 6, category: 'Mobile App'},
+  { name: 'Harvesteer Web', count: 1, category: 'Web Development'},
   { name: 'Kule', count: 5, category: 'Mobile App' },
   { name: 'The Cerve', count: 8, category: 'Web Development' },
   { name: 'Lavenry', count: 2, category: 'Mobile App' },
@@ -36,7 +37,8 @@ const itemDefinitions = [
 
 const portfolioItems = generatePortfolioItems(itemDefinitions).map((item) => {
   if (!item.title && item.imgSrc) {
-    const dynamicTitle = item.imgSrc.split('-')[0]; 
+    const filteredTitle = item.imgSrc.split('Web')[0]; 
+    const dynamicTitle = filteredTitle.split('-')[0]; 
     item.title = dynamicTitle.charAt(0).toUpperCase() + dynamicTitle.slice(1); 
   }
   return item;

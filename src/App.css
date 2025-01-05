@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #eeeeee;
 }
@@ -173,6 +177,24 @@ footer #logo-img {
   margin-top: 120px;
 }
 
+.services h1, .services .subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.services h1.animate-in, .services .subtitle.animate-in {
+  animation: fadeInUp 0.5s ease-out forwards; 
+}
+
+#self-intro .subtitle, #self-intro h1, .self-card, .career, .intro-btn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+#self-img {
+  animation: fadeIn .3s ease-out forwards;
+}
+
 @media (max-width: 768px) {
   .logo {
     display: flex;
@@ -320,6 +342,10 @@ footer #logo-img {
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+#portfolio-images {
+  animation: fadeIn .5s ease-out forwards;
+}
+
 #portfolio-gallery {
   padding-top: 36px;
 }
@@ -477,6 +503,10 @@ footer #logo-img {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+#about, #about img {
+  animation: fadeIn .5s ease-out forwards;
+}
+
 .about-container {
   display: flex;
   flex-direction: column;
@@ -713,6 +743,7 @@ footer #logo-img {
   margin: auto;
   background-color: #f9f9f9;
   border-radius: 24px;
+  animation: fadeIn .5s ease-out forwards;
 }
 
 .contact-form {
@@ -979,6 +1010,10 @@ h1 {
 #home-featured .right-container {  
   display: flex;
   justify-content: center;
+}
+
+#featured-list {
+  animation: fadeIn .5s ease-out forwards;
 }
 
 #featured-item  {
@@ -1378,18 +1413,24 @@ h1 {
 
 .mobile-tooltip {
   position: absolute;
-  background-color: #333; 
   color: #fff; 
   padding: 0.5rem 1rem; 
   border-radius: 4px; 
   font-size: 1rem; 
   white-space: nowrap; 
   z-index: 99;
+  transform: translateY(150%); 
+  opacity: 0; 
+  transition: transform 0.5s ease, opacity 0.5s ease; 
+}
+
+.mobile-tooltip.show {
   transform: translateY(-150%); 
+  opacity: 1;
 }
 
 .mobile-tooltip.right {
-  transform: translate(-200%, 50%); 
+  transform: translate(-100%, 50%); 
 }
 
 .mobile-tooltip.left {
@@ -1407,7 +1448,7 @@ h1 {
   border-color: transparent transparent #333 transparent; 
 }
 
-.mobile-tooltip.up::after {
+.mobile-tooltip.up::before {
   content: '';
   position: absolute;
   bottom: -25px; 
@@ -1418,6 +1459,84 @@ h1 {
   border-color: #333 transparent transparent transparent; 
 }
 
+.thecerve {
+  background-color: #f3b30e; 
+}.harvesteer {
+  background-color: #859648; 
+}.kule {
+  background-color: #d04b1f; 
+}
+.mobile-tooltip.up.harvesteer::before {
+  border-color:  #859648  transparent transparent transparent;
+} 
+.mobile-tooltip.down.harvesteer::before {
+  border-color:  transparent transparent #859648  transparent;
+} 
+.mobile-tooltip.up.thecerve::before {
+  border-color:  #f3b30e  transparent transparent transparent;
+} 
+.mobile-tooltip.down.thecerve::before {
+  border-color:  transparent transparent #f3b30e  transparent;
+} 
+.mobile-tooltip.up.kule::before {
+  border-color:  #d04b1f  transparent transparent transparent;
+} 
+.mobile-tooltip.down.kule::before {
+  border-color:  transparent transparent #d04b1f  transparent;
+} 
+
 #home-contact-section {
   margin-top: 100px;
+}
+
+#home-contact-section .subheading, 
+#home-contact-section h2, 
+#home-contact-section p {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#home-contact-section button {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Starts from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Ends at normal position */
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 1s ease-out forwards; 
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.skill-box {
+  animation: fadeInUp 0.8s ease-out forwards; 
+}
+
+.fade-in-loaded {
+  opacity: 1;
+  transform: translateY(0);  
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in {
+  opacity: 0.5;
+  transform: translateY(20px);
 }

@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
-const FeaturedSlider = ({ title, count }) => {
+const FeaturedSlider = ({ title, count, count_v2 }) => {
   let images = Array.from({ length: count }, (_, index) => ({
     src: `/portfolio/gallery/${title}-${index + 1}.png`,
     alt: `Image-${index + 1}`,
   }));
+  
+  let additionalImages = Array.from({ length: count_v2 }, (_, index) => ({
+    src: `/portfolio/gallery/${title} Web-${index + 1}.png`,
+    alt: `Image-${index + 1}`,
+  }));
+  
+  let combinedImages = [...images, ...additionalImages];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -12,11 +19,11 @@ const FeaturedSlider = ({ title, count }) => {
   const [lightboxImage, setLightboxImage] = useState('');
 
   const groupSize = isSmallScreen ? 2 : 3;
-  const remainder = count % groupSize;
+  const remainder = combinedImages.length % groupSize;
   const blanksNeeded = remainder === 0 ? 0 : groupSize - remainder;
 
   for (let i = 0; i < blanksNeeded; i++) {
-    images.push({
+    combinedImages.push({
       src: `/portfolio/gallery/blank.png`,
       alt: 'Blank image',
     });
@@ -35,12 +42,12 @@ const FeaturedSlider = ({ title, count }) => {
 
   const interval = 3000; 
   const goToNextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 3) % images.length); // Change to 3 images
+    setCurrentIndex((prevIndex) => (prevIndex + 3) % combinedImages.length); 
   };
 
   const goToPrevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 3 + images.length) % images.length // Change to 3 images
+      (prevIndex) => (prevIndex - 3 + combinedImages.length) % combinedImages.length
     );
   };
 
@@ -71,15 +78,15 @@ const FeaturedSlider = ({ title, count }) => {
           className="gallery"
           style={{
             transform: `translateX(-${
-              (currentIndex % (images.length - (isSmallScreen ? 1 : 2))) *
+              (currentIndex % (combinedImages.length - (isSmallScreen ? 1 : 2))) *
               (100 / (isSmallScreen ? 2 : 3))
             }%)`,
             transition: 'transform 0.5s ease',
-            width: `${Math.ceil(images.length / (isSmallScreen ? 2 : 3)) * 100}%`,
+            width: `${Math.ceil(combinedImages.length / (isSmallScreen ? 2 : 3)) * 100}%`,
             display: 'flex',
           }}
         >
-          {images.map((image, index) => (
+          {combinedImages.map((image, index) => (
             <img
               key={index}
               src={image.src}
@@ -103,7 +110,7 @@ const FeaturedSlider = ({ title, count }) => {
             />
           ))}
 
-          {images.length % (isSmallScreen ? 2 : 3) === 1 && (
+          {combinedImages.length % (isSmallScreen ? 2 : 3) === 1 && (
             <div
               style={{
                 width: isSmallScreen ? '50%' : '33.33%',
@@ -127,7 +134,7 @@ const FeaturedSlider = ({ title, count }) => {
 
       <div className="slider-indicators">
         {Array.from({
-          length: Math.ceil(images.length / (isSmallScreen ? 2 : 3)),
+          length: Math.ceil(combinedImages.length / (isSmallScreen ? 2 : 3)),
         }).map((_, index) => (
           <span
             key={index}
