@@ -122,6 +122,8 @@ export default function Featured() {
         <>
           <main>
             <h2>Featured Projects</h2>
+            <div className="mb-5"></div>
+            <div className="mb-5"></div>
             {featuredItems.map((item, index) => (
               <FeaturedItem
                 key={`feature-${item.id}${index}`}
