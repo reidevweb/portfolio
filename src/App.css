@@ -1037,6 +1037,10 @@ h1 {
   #featured-item #feature-img{
     margin-top: 36px;
   }
+  
+  #goToGalleryBtn {
+    margin-right: 0 !important;
+  }
 }
 
 #feature-img {

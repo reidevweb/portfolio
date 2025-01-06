@@ -28,11 +28,13 @@ export default function FeaturedItem({ imgSrc, category, title, count, count_v2,
                                 <div className="text">
                                     <span>
                                         {isExpanded ? description : description.slice(0, 360)}
-                                        <span style={{ display: isExpanded ? "none" : "inline" }} id="dots">...</span>
+                                        {!isExpanded && <span id="dots">...</span>}
                                     </span>
-                                    <span id="more-text" style={{ display: isExpanded ? "inline" : "none" }} >
-                                        {description.slice(360)}
-                                    </span>
+                                    {!isExpanded && (
+                                        <span id="more-text" style={{ display: "none" }}>
+                                            {description.slice(360)}
+                                        </span>
+                                    )}
                                 </div>
                                 <button onClick={toggleDescription} id="moreTextBtn" className='outline-btn intro-btn mt-3'>
                                     {isExpanded ? 'Read less' : 'Read more'}

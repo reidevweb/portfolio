@@ -42,12 +42,12 @@ const FeaturedSlider = ({ title, count, count_v2 }) => {
 
   const interval = 3000; 
   const goToNextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 3) % combinedImages.length); 
+    setCurrentIndex((prevIndex) => (prevIndex + groupSize) % combinedImages.length); 
   };
 
   const goToPrevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 3 + combinedImages.length) % combinedImages.length
+      (prevIndex) => (prevIndex - groupSize + combinedImages.length) % combinedImages.length
     );
   };
 
@@ -79,10 +79,10 @@ const FeaturedSlider = ({ title, count, count_v2 }) => {
           style={{
             transform: `translateX(-${
               (currentIndex % (combinedImages.length - (isSmallScreen ? 1 : 2))) *
-              (100 / (isSmallScreen ? 2 : 3))
+              (100 / groupSize)
             }%)`,
             transition: 'transform 0.5s ease',
-            width: `${Math.ceil(combinedImages.length / (isSmallScreen ? 2 : 3)) * 100}%`,
+            width: `${Math.ceil(combinedImages.length / groupSize) * 100}%`,
             display: 'flex',
           }}
         >
@@ -96,7 +96,7 @@ const FeaturedSlider = ({ title, count, count_v2 }) => {
                 flexShrink: 0,
                 opacity:
                   index < currentIndex ||
-                  index >= currentIndex + (isSmallScreen ? 2 : 3)
+                  index >= currentIndex + groupSize
                     ? 0
                     : 1,
                 transition: 'opacity 0.5s ease',
@@ -110,7 +110,7 @@ const FeaturedSlider = ({ title, count, count_v2 }) => {
             />
           ))}
 
-          {combinedImages.length % (isSmallScreen ? 2 : 3) === 1 && (
+          {combinedImages.length % groupSize === 1 && (
             <div
               style={{
                 width: isSmallScreen ? '50%' : '33.33%',
@@ -134,16 +134,16 @@ const FeaturedSlider = ({ title, count, count_v2 }) => {
 
       <div className="slider-indicators">
         {Array.from({
-          length: Math.ceil(combinedImages.length / (isSmallScreen ? 2 : 3)),
+          length: Math.ceil(combinedImages.length / groupSize),
         }).map((_, index) => (
           <span
             key={index}
             className={`indicator ${
-              index === Math.floor(currentIndex / (isSmallScreen ? 2 : 3))
+              index === Math.floor(currentIndex / groupSize)
                 ? 'active'
                 : ''
             }`}
-            onClick={() => setCurrentIndex(index * (isSmallScreen ? 2 : 3))}
+            onClick={() => setCurrentIndex(index * groupSize)}
           ></span>
         ))}
       </div>
