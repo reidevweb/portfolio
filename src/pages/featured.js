@@ -29,20 +29,20 @@ export default function Featured() {
       count: 5,
       imgSrc: "featured/kule.png",
       category: ["Mobile App"],
-      utils: ["flutter.png", "firebase.png"],
+      utils: ["flutterflow.png", "firebase.png"],
       description: "A content production and tracking system designed to address challenges from disorganized information flow, including announcements, important events, target deliverables, and various paperwork such as meeting minutes, articles, and multimedia materials, across multiple tools like shared documents and text messages. The system streamlines the organization's processes by automating information forwarding based on a defined hierarchical structure, batch scanning QR codes for efficient attendance tracking, and offering easier and centralized access to all publication data.",
       color: 'rgb(192, 192, 192)',
     },
-    {
-      id: 3,
-      title: "CodeHub",
-      count: 3,
-      imgSrc: "featured/codehub.png",
-      category: ["Mobile App"],
-      utils: ["react.png", "tailwind.png", "nestJS.png"],
-      description: "A code documentation and learning platform designed to serve as a central library for reusable components, providing faster and centralized access to commonly used functions, modules, and libraries from different frameworks and tools for software development.",
-      color: 'rgb(192, 192, 192)',
-    },
+    // {
+    //   id: 3,
+    //   title: "CodeHub",
+    //   count: 3,
+    //   imgSrc: "featured/codehub.png",
+    //   category: ["Mobile App"],
+    //   utils: ["react.png", "tailwind.png", "nestJS.png"],
+    //   description: "A code documentation and learning platform designed to serve as a central library for reusable components, providing faster and centralized access to commonly used functions, modules, and libraries from different frameworks and tools for software development.",
+    //   color: 'rgb(192, 192, 192)',
+    // },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0); // state to track the active slide

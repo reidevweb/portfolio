@@ -56,13 +56,15 @@ export default function FeaturedItem({ imgSrc, category, title, count, count_v2,
                         <div className="mt-3 mb-5 ml-2">
                             <p style={{fontSize: '1rem'}}>Developed using:</p>
                             {utils && utils.map((item, index) => (
+                                <div class="util-tooltip-wrapper">
                                 <img 
-                                    key={index} 
-                                    className="feature-utils" 
+                                    class="feature-utils" 
                                     src={`/portfolio/utils/${item}`} 
                                     alt="Logo" 
-                                    onLoad={handleImageLoad} 
                                 />
+                                <span class="tooltip-text">{item.split('.')[0]}</span>
+                            </div>
+                            
                             ))}
                         </div>
                         <FeaturedSlider title={title} count={count} count_v2={count_v2} onLoad={handleImageLoad} />

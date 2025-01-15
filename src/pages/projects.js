@@ -30,9 +30,9 @@ const itemDefinitions = [
   { name: 'Lavenry', count: 2, category: 'Mobile App' },
   { name: 'Our Home', count: 3, category: 'Web Development' },
   { name: 'Life Blog', count: 1, category: 'Web Development' },
-  { name: 'CodeHub', count: 3, category: 'Web Development' },
+  //{ name: 'CodeHub', count: 3, category: 'Web Development' },
   { name: 'Student Management System', count: 1, category: 'Web Development', title: 'The Cerve' },
-  { name: "Phefayer's", count: 2, category: 'Web Development' },
+  { name: "Phefayer's Restaurant Website", count: 2, category: 'Web Development' },
 ];
 
 const portfolioItems = generatePortfolioItems(itemDefinitions).map((item) => {

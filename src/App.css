@@ -1463,6 +1463,34 @@ h1 {
   border-color: #333 transparent transparent transparent; 
 }
 
+.util-tooltip-wrapper {
+  position: relative;
+  display: inline-block; 
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: #555; 
+  color: #fff; 
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 125%; 
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1; 
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out;
+  font-size: 12px;
+}
+
+.util-tooltip-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 .thecerve {
   background-color: #f3b30e; 
 }.harvesteer {

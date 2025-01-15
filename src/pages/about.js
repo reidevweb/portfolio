@@ -30,8 +30,13 @@ export default function About() {
                                     </div>
                                     <div className="col-lg-6">
                                         <ul>
-                                          <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>20</span></li>
-                                          <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>reinamariane@example.com</span></li>
+                                          <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
+                                          <li>
+                                            <i className="bi bi-chevron-right"></i> <strong>Email:</strong> 
+                                            <span>
+                                                <a href="mailto:re@example.com" className="email-link">tiburcio.reinac@example.com</a>
+                                            </span>
+                                          </li>
                                           <li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                                         </ul>
                                     </div>
