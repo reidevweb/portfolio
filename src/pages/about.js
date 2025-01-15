@@ -57,7 +57,7 @@ export default function About() {
                                         </ul>
                                     </div>
                                     <div className="col-lg-6">
-                                        <h3>Coding Skills</h3>
+                                        <h3>Programming Languages</h3>
                                         <ul>
                                             <li><strong>Dart</strong></li>
                                             <li><strong>Python</strong></li>
