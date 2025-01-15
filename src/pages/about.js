@@ -34,7 +34,7 @@ export default function About() {
                                           <li>
                                             <i className="bi bi-chevron-right"></i> <strong>Email:</strong> 
                                             <span>
-                                                <a href="mailto:re@example.com" className="email-link">tiburcio.reinac@example.com</a>
+                                                <a href="mailto:tiburcio.reina@gmail.com" className="email-link">tiburcio.reinac@gmail.com</a>
                                             </span>
                                           </li>
                                           <li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>

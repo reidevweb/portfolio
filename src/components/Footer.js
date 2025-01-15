@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="col-lg-4 d-flex flex-column align-items-start custom-block">
               <h6 className="text-uppercase mb-4 font-weight-bold">Contact</h6>
               <p><i className="fas fa-home mr-3"></i> Nueva Ecija, Philippines </p>
-              <p><i className="fas fa-envelope mr-3"></i> <span><a href="mailto:re@example.com" className="email-link">tiburcio.reinac@example.com</a></span> </p>
+              <p><i className="fas fa-envelope mr-3"></i> <span><a href="mailto:tiburcio.reina@gmail.com" className="email-link">tiburcio.reinac@gmail.com</a></span> </p>
             </div>
 
             {/* Center Section: Logo and Quote */}
