@@ -23,14 +23,12 @@ export default function About() {
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <ul>
-                                          <li><i className="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>24 May 2003</span></li>
                                           <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+(639) 087 031 065</span></li>
-                                          <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>Nueva Ecija, Philippines</span></li>
+                                          <li><i className="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Quezon City, Metro Manila, Philippines</span></li>
                                         </ul>
                                     </div>
                                     <div className="col-lg-6">
                                         <ul>
-                                          <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
                                           <li>
                                             <i className="bi bi-chevron-right"></i> <strong>Email:</strong> 
                                             <span>
@@ -63,10 +61,11 @@ export default function About() {
                                             <li><strong>Python</strong></li>
                                             <li><strong>PHP</strong></li>
                                             <li><strong>SQL</strong></li>
+                                            <li><strong>C#</strong></li>
+                                            <li><strong>Java</strong></li>
                                             <li><strong>JS</strong></li>
                                             <li><strong>CSS</strong></li>
                                             <li><strong>HTML</strong></li>
-                                            <li><strong>Java</strong></li>
                                         </ul>
                                     </div>
                                     <div className="rec col-lg-6">
@@ -75,6 +74,7 @@ export default function About() {
                                             <li><strong>Flutter</strong></li>
                                             <li><strong>Django</strong></li>
                                             <li><strong>Laravel</strong></li>
+                                            <li><strong>.NET</strong></li>
                                             <li><strong>NestJS</strong></li>
                                             <li><strong>ReactJS</strong></li>
                                             <li><strong>Tailwind</strong></li>

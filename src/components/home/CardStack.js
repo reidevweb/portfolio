@@ -7,7 +7,7 @@ export default class CardStack extends Component {
         this.state = {
             hoveredIndex: null,
             cards: ['/portfolio/home/1.png', '/portfolio/home/2.png', '/portfolio/home/3.png'],
-            titles: ['The Cerve', 'Harvesteer', 'Kule'],
+            titles: ['The Cerve', 'Harvesteer', 'Kulekt'],
         };
     }
 

@@ -1495,7 +1495,7 @@ h1 {
   background-color: #f3b30e; 
 }.harvesteer {
   background-color: #859648; 
-}.kule {
+}.kulekt {
   background-color: #d04b1f; 
 }
 .mobile-tooltip.up.harvesteer::before {
@@ -1510,10 +1510,10 @@ h1 {
 .mobile-tooltip.down.thecerve::before {
   border-color:  transparent transparent #f3b30e  transparent;
 } 
-.mobile-tooltip.up.kule::before {
+.mobile-tooltip.up.kulekt::before {
   border-color:  #d04b1f  transparent transparent transparent;
 } 
-.mobile-tooltip.down.kule::before {
+.mobile-tooltip.down.kulekt::before {
   border-color:  transparent transparent #d04b1f  transparent;
 } 
 

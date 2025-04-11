@@ -25,9 +25,9 @@ export default function Featured() {
     
     {
       id: 2,
-      title: "Kule",
+      title: "Kulekt",
       count: 5,
-      imgSrc: "featured/kule.png",
+      imgSrc: "featured/kulekt.png",
       category: ["Mobile App"],
       utils: ["flutterflow.png", "firebase.png"],
       description: "A content production and tracking system designed to address challenges from disorganized information flow, including announcements, important events, target deliverables, and various paperwork such as meeting minutes, articles, and multimedia materials, across multiple tools like shared documents and text messages. The system streamlines the organization's processes by automating information forwarding based on a defined hierarchical structure, batch scanning QR codes for efficient attendance tracking, and offering easier and centralized access to all publication data.",

@@ -25,7 +25,7 @@ function generatePortfolioItems(itemDefinitions) {
 const itemDefinitions = [
   { name: 'Harvesteer', count: 6, category: 'Mobile App'},
   { name: 'Harvesteer Web', count: 1, category: 'Web Development'},
-  { name: 'Kule', count: 5, category: 'Mobile App' },
+  { name: 'Kulekt', count: 5, category: 'Mobile App' },
   { name: 'The Cerve', count: 8, category: 'Web Development' },
   { name: 'Lavenry', count: 2, category: 'Mobile App' },
   { name: 'Our Home', count: 3, category: 'Web Development' },
