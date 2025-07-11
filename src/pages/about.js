@@ -24,7 +24,7 @@ export default function About() {
                                     <div className="col-lg-6">
                                         <ul>
                                           <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+(639) 087 031 065</span></li>
-                                          <li><i className="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Quezon City, Metro Manila, Philippines</span></li>
+                                          <li><i className="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Metro Manila, Philippines</span></li>
                                         </ul>
                                     </div>
                                     <div className="col-lg-6">
